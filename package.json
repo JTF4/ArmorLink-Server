@@ -1,0 +1,19 @@
+{
+  "name": "ArmorLink-Server",
+  "version": "1.0.0",
+  "main": "./src/index.js",
+  "repository": "https://github.com/JTF4/ArmorLink-Server.git",
+  "author": "David Stevens <teamjtf4@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "dev": "DEBUG=*,-engine*,-socket.io*,-express* node ./src/index.js"
+  },
+  "dependencies": {
+    "debug": "^4.3.4",
+    "express": "^4.18.2",
+    "socket.io": "^4.6.1",
+    "socket.io-client": "^4.6.1"
+  }
+}
