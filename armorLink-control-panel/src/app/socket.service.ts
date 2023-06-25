@@ -1,16 +1,24 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
+import { Subject } from 'rxjs'
 
 @Injectable({
   providedIn: 'root'
 })
 export class SocketService {
 
-  constructor() {
+  timeTimeout: any;
 
+  private timeCallback = new Subject<string>(); // Source
+  timeCallback$ = this.timeCallback.asObservable(); // Stream
+
+  constructor() {
+    this.startTimeServer()
   } 
 
   public getTime() {
-    return Date.now();
+    let date = new Date();
+    let timeString = `${date.getHours()}:${date.getMinutes()}`
+    return timeString;
   }
 
   public getTemperature(componentId: number): number {
@@ -22,7 +30,7 @@ export class SocketService {
   }
 
   public getBatteryLife() {
-    return 100
+    return 90
   }
 
   public getColorMap() {
@@ -50,5 +58,13 @@ export class SocketService {
     }
 
     return testMap
+  }
+
+  
+
+  private startTimeServer() {
+    setInterval(() => {
+      this.timeCallback.next(this.getTime())
+    }, 1000);
   }
 }
