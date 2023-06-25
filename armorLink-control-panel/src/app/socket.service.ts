@@ -17,6 +17,14 @@ export class SocketService {
     return 10
   }
 
+  public getO2Sat() {
+    return 90;
+  }
+
+  public getBatteryLife() {
+    return 100
+  }
+
   public getColorMap() {
     let testMap = {
       1: {

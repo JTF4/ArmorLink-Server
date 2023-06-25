@@ -1,24 +1,4 @@
 <div class="advanced-control">
     <h2>Advanced Control</h2>
-    <div class="pixel-controls" *ngFor="let pixel of armorPixels; let i = index">
-      <div class="pixel-color-picker">
-        <label for="pixel-color-picker-{{ i }}">Color:</label>
-        <input type="color" id="pixel-color-picker-{{ i }}" [(ngModel)]="pixel.color">
-      </div>
-    
-      <div class="pixel-brightness-slider">
-        <label for="pixel-brightness-slider-{{ i }}">Brightness:</label>
-        <input type="range" id="pixel-brightness-slider-{{ i }}" min="0" max="100" [(ngModel)]="pixel.brightness">
-      </div>
-    
-      <div class="pixel-fan-speed" *ngIf="pixel.hasFan">
-        <label for="pixel-fan-speed-{{ i }}">Fan Speed:</label>
-        <select id="pixel-fan-speed-{{ i }}" [(ngModel)]="pixel.fanSpeed">
-          <option value="low">Low</option>
-          <option value="medium">Medium</option>
-          <option value="high">High</option>
-        </select>
-      </div>
-    </div>
 </div>
   

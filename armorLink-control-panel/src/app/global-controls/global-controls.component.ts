@@ -10,7 +10,19 @@ import { SocketService } from '../socket.service';
 export class GlobalControlsComponent {
   
   constructor(private SocketService:SocketService) {
-    
+
+  }
+
+  public fanSpeedChange(speed?: any | undefined | null) {
+
+  }
+
+  public brightnessChange(brightness?: any | undefined | null) {
+
+  }
+
+  public colorChange(color?: any | undefined | null) {
+
   }
   // Component logic and methods go here
 }

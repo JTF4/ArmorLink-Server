@@ -7,6 +7,7 @@ import { GlobalControlsComponent } from './global-controls/global-controls.compo
 import { StatusReadoutsComponent } from './status-readouts/status-readouts.component';
 import { AdvancedControlComponent } from './advanced-control/advanced-control.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AppRoutingModule } from './app-routing.module';
     ArmorViewComponent,
     GlobalControlsComponent,
     StatusReadoutsComponent,
-    AdvancedControlComponent
+    AdvancedControlComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

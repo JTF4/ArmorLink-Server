@@ -2,17 +2,17 @@
     <h2>Global Controls</h2>
     <div class="color-picker">
       <label for="color-picker">Select Color:</label>
-      <input type="color" id="color-picker" (change)="colorChange.emit($event.target.value)">
+      <input type="color" id="color-picker" (change)="colorChange()">
     </div>
     
     <div class="brightness-slider">
       <label for="brightness-slider">Brightness:</label>
-      <input type="range" id="brightness-slider" min="0" max="100" (input)="brightnessChange.emit($event.target.valueAsNumber)">
+      <input type="range" id="brightness-slider" min="0" max="100" (input)="brightnessChange()">
     </div>
     
     <div class="fan-speed">
       <label for="fan-speed">Fan Speed:</label>
-      <select id="fan-speed" (change)="fanSpeedChange.emit($event.target.value)">
+      <select id="fan-speed" (change)="fanSpeedChange()">
         <option value="low">Low</option>
         <option value="medium">Medium</option>
         <option value="high">High</option>
