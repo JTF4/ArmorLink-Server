@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 import { ArmorViewComponent } from './armor-view/armor-view.component';
 import { HeaderComponent } from './header/header.component';
-import { StatusReadoutsComponent } from './status-readouts/status-readouts.component';
 import { GlobalControlsComponent } from './global-controls/global-controls.component';
+import { StatusReadoutsComponent } from './status-readouts/status-readouts.component';
 
 @Component({
   selector: 'app-root',

@@ -88,7 +88,7 @@
   }
 
   .card svg.material-icons path {
-    fill: #070707;
+    fill: #0a0a0a;
   }
 
   .card-container {
@@ -223,7 +223,11 @@
     cursor: pointer;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transition: 1s ease-out;
+    position: relative;
+    bottom: 0;
+    left: -50%;
   }
+  
 
   .circle-link:hover {
     transform: translateY(-0.25rem);
