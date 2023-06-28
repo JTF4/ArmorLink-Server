@@ -2,12 +2,14 @@
     <h2>Global Controls</h2>
     <div class="color-picker">
       <label for="color-picker">Select Color:</label>
-      <input type="color" id="color-picker" (change)="colorChange()">
+      <ngx-colors ngx-colors-trigger [(ngModel)]="color"></ngx-colors>
     </div>
     
     <div class="brightness-slider">
       <label for="brightness-slider">Brightness:</label>
-      <input type="range" id="brightness-slider" min="0" max="100" (input)="brightnessChange()">
+      <mat-slider min="0" max="100" step="1" discrete [displayWith]="formatLabel" [(ngModel)]="brightness" (change)="brightnessChange(brightness)">
+        <input matSliderThumb>
+      </mat-slider>      
     </div>
     
     <div class="fan-speed">

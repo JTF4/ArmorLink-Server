@@ -8,7 +8,7 @@ import { StatusReadoutsComponent } from './status-readouts/status-readouts.compo
 
 const routes: Routes = [
   { path: 'view', component: ArmorViewComponent },
-  { path: 'global', component: GlobalControlsComponent},
+  { path: '', component: GlobalControlsComponent},
   { path: 'advanced', component: AdvancedControlComponent},
   { path: 'status', component: StatusReadoutsComponent}
 ];
