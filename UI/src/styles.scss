@@ -80,7 +80,7 @@ $armorLink-control-panel-theme: mat.define-light-theme((
     height: 60px;
     display: flex;
     align-items: center;
-    background-color: #1976d2;
+    background-color: #000000;
     color: white;
     font-weight: 600;
   }
@@ -106,13 +106,13 @@ $armorLink-control-panel-theme: mat.define-light-theme((
 
   .content {
     display: flex;
-    margin: 82px auto 32px;
-    padding: 0 16px;
+    margin: 20px -5px;
+    padding: 0 10px;
     max-width: 960px;
     flex-direction: column;
     align-items: center;
-    width: 97%;
-    height: 70vh;
+    width: 100%;
+    height: 100vh;
     overflow: hidden;
   }
 

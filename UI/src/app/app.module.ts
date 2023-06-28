@@ -17,6 +17,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 import { NgxColorsModule } from 'ngx-colors';
 import { FormsModule } from '@angular/forms';
 import { MatSliderModule } from '@angular/material/slider'
+import { MatIconModule } from '@angular/material/icon'
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { MatSliderModule } from '@angular/material/slider'
     MatSlideToggleModule,
     NgxColorsModule,
     FormsModule,
-    MatSliderModule
+    MatSliderModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

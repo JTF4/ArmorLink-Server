@@ -12,4 +12,23 @@ import { StatusReadoutsComponent } from './status-readouts/status-readouts.compo
 })
 export class AppComponent {
   title = 'armorLink-control-panel';
+
+  //Color Definitions
+
+  bucketColor: string = '#ffffff';
+  chestColor: string = '#ffffff';
+  shoulderColor: string = '#ffffff';
+  forarmsColor: string = '#ffffff';
+  thighsColor: string = '#ffffff';
+  shinsColor: string = '#ffffff';
+  weaponColor: string = '#ffffff';
+  atmosphericsColor: string = '#ffffff';
+  sfxColor: string = '#ffffff';
+  chasesColor: string = '#ffffff';
+
+  constructor() {
+
+  }
+
+
 }
