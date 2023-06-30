@@ -1,21 +1,20 @@
-import { Component, Output, EventEmitter, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { SocketService } from '../socket.service';
 
 import Debug from 'debug';
 
 @Component({
-  selector: 'app-global-controls',
-  templateUrl: './global-controls.component.html',
-  styleUrls: ['./global-controls.component.scss'],
+  selector: 'app-chest-control',
+  templateUrl: './chest-control.component.html',
+  styleUrls: ['./chest-control.component.scss'],
   providers: [SocketService]
 })
-export class GlobalControlsComponent {
-  
+export class ChestControlComponent {
   color: any = "#EC407A";
   brightness: number = 0;
   fanSpeed: number = 0;
 
-  debug = Debug("GlobalControls");
+  debug = Debug("ChestControl");
 
   constructor(private SocketService:SocketService) {
     
@@ -41,5 +40,4 @@ export class GlobalControlsComponent {
     this.brightness = value
     return `${value}`;
   }
-  // Component logic and methods go here
 }

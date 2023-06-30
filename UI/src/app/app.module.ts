@@ -17,7 +17,17 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 import { NgxColorsModule } from 'ngx-colors';
 import { FormsModule } from '@angular/forms';
 import { MatSliderModule } from '@angular/material/slider'
-import { MatIconModule } from '@angular/material/icon'
+import { MatIconModule } from '@angular/material/icon';
+import { BucketControlComponent } from './bucket-control/bucket-control.component';
+import { ChestControlComponent } from './chest-control/chest-control.component';
+import { ShouldersControlComponent } from './shoulders-control/shoulders-control.component';
+import { ForarmsControlsComponent } from './forarms-controls/forarms-controls.component';
+import { ThighsControlComponent } from './thighs-control/thighs-control.component';
+import { ShinsControlComponent } from './shins-control/shins-control.component';
+import { WeaponsControlComponent } from './weapons-control/weapons-control.component';
+import { AtmosphericsControlComponent } from './atmospherics-control/atmospherics-control.component';
+import { SfxControlComponent } from './sfx-control/sfx-control.component';
+import { ChasesControlComponent } from './chases-control/chases-control.component'
 
 @NgModule({
   declarations: [
@@ -26,7 +36,17 @@ import { MatIconModule } from '@angular/material/icon'
     GlobalControlsComponent,
     StatusReadoutsComponent,
     AdvancedControlComponent,
-    HeaderComponent
+    HeaderComponent,
+    BucketControlComponent,
+    ChestControlComponent,
+    ShouldersControlComponent,
+    ForarmsControlsComponent,
+    ThighsControlComponent,
+    ShinsControlComponent,
+    WeaponsControlComponent,
+    AtmosphericsControlComponent,
+    SfxControlComponent,
+    ChasesControlComponent
   ],
   imports: [
     BrowserModule,

@@ -1,25 +1,23 @@
-import { Component, Output, EventEmitter, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { SocketService } from '../socket.service';
 
 import Debug from 'debug';
 
 @Component({
-  selector: 'app-global-controls',
-  templateUrl: './global-controls.component.html',
-  styleUrls: ['./global-controls.component.scss'],
+  selector: 'app-bucket-control',
+  templateUrl: './bucket-control.component.html',
+  styleUrls: ['./bucket-control.component.scss'],
   providers: [SocketService]
 })
-export class GlobalControlsComponent {
-  
+export class BucketControlComponent {
   color: any = "#EC407A";
   brightness: number = 0;
   fanSpeed: number = 0;
 
-  debug = Debug("GlobalControls");
+  debug = Debug('HelmetControl')
 
   constructor(private SocketService:SocketService) {
     
-      
   }
 
   public fanSpeedChange(speed?: any | undefined | null) {

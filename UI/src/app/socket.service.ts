@@ -1,5 +1,6 @@
 import { EventEmitter, Injectable } from '@angular/core';
 import { Subject } from 'rxjs'
+import { ColorMap } from './_models/ColorMap.model';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,33 @@ export class SocketService {
 
   private timeCallback = new Subject<string>(); // Source
   timeCallback$ = this.timeCallback.asObservable(); // Stream
+
+  private colorCallback = new Subject<ColorMap>(); // Source
+  colorCallback$ = this.colorCallback.asObservable(); // Stream
+
+  colorMap: ColorMap = {
+    bucket: "#f1f1f1",
+    chest: "#000000",
+    shoulders: {
+      left: "#000000",
+      right: "#000000"
+    },
+    forarms: {
+      right: "#000000",
+      left: "#000000"
+    },
+    thighs: {
+      right: "#000000",
+      left: "#000000"
+    },
+    shins: {
+      right: "#000000",
+      left: "#000000"
+    },
+    weapons: [
+      { color: "#000000" }
+    ]
+  }
 
   constructor() {
     this.startTimeServer()
@@ -34,37 +62,15 @@ export class SocketService {
   }
 
   public getColorMap() {
-    let testMap = {
-      1: {
-        r: 255,
-        g: 255,
-        b: 255
-      },
-      2: {
-        r: 255,
-        g: 255,
-        b: 255
-      },
-      3: {
-        r: 255,
-        g: 255,
-        b: 255
-      },
-      4: {
-        r: 255,
-        g: 255,
-        b: 255
-      }
-    }
-
-    return testMap
+    return this.colorMap;
   }
 
   
 
   private startTimeServer() {
     setInterval(() => {
-      this.timeCallback.next(this.getTime())
+      this.timeCallback.next(this.getTime());
+      this.colorCallback.next(this.colorMap);
     }, 1000);
   }
 }
